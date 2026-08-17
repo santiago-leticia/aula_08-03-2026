@@ -13,7 +13,9 @@ export default function Index() {
     //ele vai atualizar
 
     //passa por varias promise e so tinha um por isso que dav erro
-    await new Promise(resolve => setTimeout(resolve,30_0000));
+    await new Promise(resolve => setTimeout(resolve, 2_0000));
+
+    console.log("Requisção esta sendo feita")
 
     if (!response.ok) {
       throw new Error("Deu ruim!");
@@ -29,7 +31,7 @@ export default function Index() {
     queryFn: queryFn,
     //ele vai atuateliza
     staleTime: 30_000,
-    gcTime:10_000,
+    gcTime: 10_000,
   });
 
   if (isLoading) {
